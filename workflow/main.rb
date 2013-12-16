@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
+<<<<<<< HEAD
+=======
+$: << File.expand_path(File.dirname(__FILE__))
+>>>>>>> 5b838ce... initial commit
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require "bundle/bundler/setup"
 require "alfred"

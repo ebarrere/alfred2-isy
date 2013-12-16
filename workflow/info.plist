@@ -3,6 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
+<<<<<<< HEAD
 	<string>me.zhaowu.alfred2-ruby-template</string>
 	<key>connections</key>
 	<dict>
@@ -11,13 +12,27 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>42D05639-3F0F-4760-8214-317167E4173D</string>
+=======
+	<string>test</string>
+	<key>connections</key>
+	<dict>
+		<key>01AACF06-DCB4-4BB5-ADCD-CFDF0EACB266</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A4F19EC1-C743-474C-A554-CFFCD93B999A</string>
+>>>>>>> 5b838ce... initial commit
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
 		</array>
+<<<<<<< HEAD
 		<key>BA17BE41-176A-4E9A-B958-A3F0BEA36829</key>
+=======
+		<key>A4F19EC1-C743-474C-A554-CFFCD93B999A</key>
+>>>>>>> 5b838ce... initial commit
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -30,6 +45,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
+<<<<<<< HEAD
 	<string>Zhao Cai</string>
 	<key>description</key>
 	<string>A starting place for developing Ruby based workflow in Alfred</string>
@@ -37,11 +53,21 @@
 	<false/>
 	<key>name</key>
 	<string>Ruby Based Workflow Template</string>
+=======
+	<string>Elliott Barrere</string>
+	<key>description</key>
+	<string>Control the Universal Devices ISY99i home automation appliance</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>ISY99i Control</string>
+>>>>>>> 5b838ce... initial commit
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
+<<<<<<< HEAD
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -56,6 +82,37 @@
 				<string>Ruby Based Workflow Template</string>
 				<key>title</key>
 				<string>Test Alfred Feedback</string>
+=======
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>/usr/bin/ruby ./isy_control.rb {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A4F19EC1-C743-474C-A554-CFFCD93B999A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>keyword</key>
+				<string>isy</string>
+				<key>runningsubtext</key>
+				<string>waiting for edward...</string>
+				<key>script</key>
+				<string>/usr/bin/ruby ./isy_query.rb {query}</string>
+				<key>title</key>
+				<string>Control ISY99i</string>
+>>>>>>> 5b838ce... initial commit
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -64,7 +121,13 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
+<<<<<<< HEAD
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
+=======
+			<string>01AACF06-DCB4-4BB5-ADCD-CFDF0EACB266</string>
+			<key>version</key>
+			<integer>0</integer>
+>>>>>>> 5b838ce... initial commit
 		</dict>
 		<dict>
 			<key>config</key>
@@ -88,6 +151,7 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>42D05639-3F0F-4760-8214-317167E4173D</string>
+<<<<<<< HEAD
 		</dict>
 		<dict>
 			<key>config</key>
@@ -115,22 +179,34 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>BA17BE41-176A-4E9A-B958-A3F0BEA36829</string>
+=======
+			<key>version</key>
+			<integer>0</integer>
+>>>>>>> 5b838ce... initial commit
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+<<<<<<< HEAD
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<dict>
 			<key>ypos</key>
 			<real>250</real>
+=======
+		<key>01AACF06-DCB4-4BB5-ADCD-CFDF0EACB266</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
+>>>>>>> 5b838ce... initial commit
 		</dict>
 		<key>42D05639-3F0F-4760-8214-317167E4173D</key>
 		<dict>
 			<key>ypos</key>
 			<real>140</real>
 		</dict>
+<<<<<<< HEAD
 		<key>BA17BE41-176A-4E9A-B958-A3F0BEA36829</key>
 		<dict>
 			<key>ypos</key>
@@ -139,5 +215,15 @@
 	</dict>
 	<key>webaddress</key>
 	<string>http://github.com/zhaocai/alfred2-ruby-template</string>
+=======
+		<key>A4F19EC1-C743-474C-A554-CFFCD93B999A</key>
+		<dict>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://github.com/ebarrere</string>
+>>>>>>> 5b838ce... initial commit
 </dict>
 </plist>
