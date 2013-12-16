@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
+$: << File.expand_path(File.dirname(__FILE__))
 require 'rubygems' unless defined? Gem
 require "bundle/bundler/setup"
 require "alfred"
