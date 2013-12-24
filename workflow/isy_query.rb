@@ -4,7 +4,7 @@
 $: << File.expand_path(File.dirname(__FILE__))
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require "bundle/bundler/setup"
-require "bundle/bundler/isy"
+require "isy"
 require "alfred"
 
   

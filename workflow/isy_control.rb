@@ -3,7 +3,7 @@
 
 $: << File.expand_path(File.dirname(__FILE__))
 require 'open-uri'
-require "bundle/bundler/isy"
+require "isy"
 require "alfred"
 require "ruhue"
 require "color"
