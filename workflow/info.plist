@@ -4,6 +4,7 @@
 <dict>
 	<key>bundleid</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<string>me.zhaowu.alfred2-ruby-template</string>
 	<key>connections</key>
 	<dict>
@@ -14,6 +15,9 @@
 				<string>42D05639-3F0F-4760-8214-317167E4173D</string>
 =======
 	<string>test</string>
+=======
+	<string>continuum.us.alfred2-isy</string>
+>>>>>>> df2f39f... Run "rake bundle:update"
 	<key>connections</key>
 	<dict>
 		<key>01AACF06-DCB4-4BB5-ADCD-CFDF0EACB266</key>
@@ -223,7 +227,11 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
+<<<<<<< HEAD
 	<string>http://github.com/ebarrere</string>
 >>>>>>> 5b838ce... initial commit
+=======
+	<string>https://github.com/ebarrere/alfred2-isy/</string>
+>>>>>>> df2f39f... Run "rake bundle:update"
 </dict>
 </plist>
