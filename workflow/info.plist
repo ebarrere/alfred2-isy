@@ -4,6 +4,7 @@
 <dict>
 	<key>bundleid</key>
 	<string>test</string>
+	<string>continuum.us.alfred2-isy</string>
 	<key>connections</key>
 	<dict>
 		<key>01AACF06-DCB4-4BB5-ADCD-CFDF0EACB266</key>
@@ -130,6 +131,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>http://github.com/ebarrere</string>
+	<string>https://github.com/ebarrere/alfred2-isy/</string>
 </dict>
 </plist>
