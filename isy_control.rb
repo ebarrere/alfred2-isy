@@ -19,13 +19,11 @@ Alfred.with_friendly_error do |alfred|
   node_name, node_address, value = ARGV[0].split(':') # ARGV is a one-element array containing a :-delimited string
   # if value != "group"
   value = value.to_i
-  @logger.debug("value: #{value}") if @debug
   # else
     # group = true
   # end
   node_address = URI::encode(node_address)
-  url = value == 0 ? "/rest/nodes/#{node_address}/cmd/DOF" : "/rest/nodes/#{node_address}/cmd/DON/#{value}"
-  # url = value == 0 ? "/rest/nodes/#{node_address}/cmd/DON/#{value}" : "/rest/nodes/#{node_address}/cmd/DOF"
+  url = value == 0 ? "/rest/nodes/#{node_address}/cmd/DON" : "/rest/nodes/#{node_address}/cmd/DOF"
   @logger.debug("url: #{url}") if @debug
   action = value == 0 ? "on" : "off"
   response = ISY.get(url)
@@ -37,8 +35,7 @@ Alfred.with_friendly_error do |alfred|
     print "#{node_name} turned #{action}"
   end
 
-  if node_name =~ /Hue lamps/ # set random color on hue lamps
-    sleep(1)
+  if node_name =~ /Hue lamps/ # set holiday color on hue lamps
     client = Ruhue::Client.new(Ruhue::discover, 'elliottbarrere')
     light1 = client.light(1)
     light2 = client.light(2)
@@ -47,9 +44,7 @@ Alfred.with_friendly_error do |alfred|
     # light2.hsl = Color::RGB::Orchid.to_hsl
     # light2.select
     # light2.hue=(39682)
-    light1.hue=(rand(2**16-1))
-    light2.hue=(rand(2**16-1))
-    light3.on
-    light3.hue=(rand(2**16-1))
+    light1.hue=(0)
+    light2.hue=(0)
   end
 end
