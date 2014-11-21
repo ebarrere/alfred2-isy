@@ -33,7 +33,7 @@ Alfred.with_friendly_error do |alfred|
   when 'on'
     logger.debug("Turning #{node_address} on.") if debug
     logger.debug(isy.node_on(node_address))
-  when /^(off|0)$/
+  when /^(off|0+)$/
     logger.debug("Turning #{node_address} off.") if debug
     logger.debug(isy.node_off(node_address))
   when /^[0-9]+$/

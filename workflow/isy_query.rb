@@ -29,9 +29,11 @@ Alfred.with_friendly_error do |alfred|
 
   # set program variables from Alfred's query string
   (query, value) = faux_query(ARGV.join(' ')).split(':')
+  logger.debug("query: #{query}, value: #{value}") if debug
 
   # Test if cache exists and is valid
   if fb = alfred.feedback.get_cached_feedback # cached feedback is valid
+    logger.debug("Cached feedback found and valid, using it") if debug
     # Make sure our cached items have the correct ARG value!
     # logger.debug("fb: #{fb.methods}")
     if value
@@ -41,6 +43,7 @@ Alfred.with_friendly_error do |alfred|
     end
     puts fb.to_alfred(query)
   else # cached feedback not valid or nonexistent
+    logger.debug("Cached feedback not found or not valid, generating") if debug
     fb = alfred.feedback
     # fb.add_item({:title => 'waiting'})
     puts fb.to_alfred(query)
