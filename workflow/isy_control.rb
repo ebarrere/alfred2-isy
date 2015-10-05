@@ -7,7 +7,7 @@ require 'isy_config'
 
 require 'alfred'
 require 'open-uri'
-require 'ruhue'
+# require 'ruhue'
 require 'color'
 
 
@@ -33,17 +33,17 @@ Alfred.with_friendly_error do |alfred|
   # TODO: GROUPS SHOULD ALWAYS HIT DON
   case value
   when 'on'
-    logger.debug("Turning #{node_address} on.") if debug
-    logger.debug(isy.node_on(node_address))
+    logger.info("Turning #{node_name} (#{node_address}) on.")
+    isy.node_on(node_address)
   when /^(off|0+)$/
-    logger.debug("Turning #{node_address} off.") if debug
-    logger.debug(isy.node_off(node_address))
+    logger.info("Turning #{node_name} (#{node_address}) off.")
+    isy.node_off(node_address)
   when /^[0-9]+$/
-    logger.debug("Setting #{node_address} to #{value}.") if debug
-    logger.debug(isy.set_node_level(node_address,value))
+    logger.info("Setting #{node_name} (#{node_address}) to #{value}.")
+    isy.set_node_level(node_address,value)
   else
-    logger.debug("#{node_address} toggled") if debug
-    logger.debug(isy.node_on?(node_address) ? isy.node_off(node_address) : isy.node_on(node_address))
+    logger.info("#{node_name} (#{node_address}) toggled")
+    isy.node_on?(node_address) ? isy.node_off(node_address) : isy.node_on(node_address)
   end
   # node_address = URI::encode(node_address)
   # url = value == 0 ? "/rest/nodes/#{node_address}/cmd/DOF" : "/rest/nodes/#{node_address}/cmd/DON/#{value}"
