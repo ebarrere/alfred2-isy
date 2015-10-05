@@ -3,6 +3,7 @@
 
 $: << File.expand_path(File.dirname(__FILE__))
 require 'lib/isy'
+require 'isy_config'
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'bundle/bundler/setup'
@@ -47,7 +48,7 @@ Alfred.with_friendly_error do |alfred|
     fb = alfred.feedback
     # fb.add_item({:title => 'waiting'})
     puts fb.to_alfred(query)
-    isy = ISY.new('https://t.0o0.bz','admin','password')
+    isy = ISY.new($isy_config[:hostname], $isy_config[:username], $isy_config[:password])
 
     # handle nodes (single lights/non-scenes)
     isy.nodes.sort_by! { |hash| hash['name']}.each do |node|

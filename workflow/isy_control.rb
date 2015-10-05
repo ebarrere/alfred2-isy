@@ -3,6 +3,8 @@
 
 $: << File.expand_path(File.dirname(__FILE__))
 require 'lib/isy'
+require 'isy_config'
+
 require 'alfred'
 require 'open-uri'
 require 'ruhue'
@@ -26,7 +28,7 @@ Alfred.with_friendly_error do |alfred|
     # group = true
   # end
 
-  isy = ISY.new('https://t.0o0.bz','admin','password')
+  isy = ISY.new($isy_config[:hostname], $isy_config[:username], $isy_config[:password])
 
   # TODO: GROUPS SHOULD ALWAYS HIT DON
   case value
