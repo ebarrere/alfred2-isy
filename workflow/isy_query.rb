@@ -24,8 +24,8 @@ Alfred.with_friendly_error do |alfred|
   alfred.with_rescue_feedback = true
   alfred.with_cached_feedback do
     # expire in 1 hour
-    use_cache_file :expire => 3600
-    # use_cache_file :file => "/tmp/alfred2-isy_cache_file", :expire => 3600
+    # use_cache_file :expire => 86400
+    # use_cache_file :file => "/tmp/alfred2-isy_cache_file", :expire => 86400
   end
 
   # set program variables from Alfred's query string
@@ -34,7 +34,7 @@ Alfred.with_friendly_error do |alfred|
 
   # Test if cache exists and is valid
   if fb = alfred.feedback.get_cached_feedback # cached feedback is valid
-    logger.debug("Cached feedback found and valid, using it") if debug
+    logger.debug("Cached feedback found ('#{alfred.feedback.backend_file}') and valid, using it") if debug
     # Make sure our cached items have the correct ARG value!
     # logger.debug("fb: #{fb.methods}")
     if value
