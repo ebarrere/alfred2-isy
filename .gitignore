@@ -1,4 +1,4 @@
-workflow/isy_config # password information stored here
+workflow/isy_config.rb
 workflow/.bundle
 workflow/bundle
 .ruby-version
