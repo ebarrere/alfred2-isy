@@ -1,10 +1,6 @@
 source "https://rubygems.org"
 
 gem "plist"
-<<<<<<< HEAD
-gem "alfred-workflow"
-=======
 gem "logging"
 gem "httparty"
 gem "alfred-workflow", ">= 1.1.1"
->>>>>>> 5b838ce... initial commit
