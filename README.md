@@ -35,5 +35,7 @@ bundle install
 Add isy_config.rb
 
 ```
-echo "$isy_config = {:hostname => 'https://isy.domain.com', :username => 'my_username', :password => 'my_password' }" > /path/to/folder/workflow/isy_config.rb
+cat <<'EOF' > /path/to/folder/workflow/isy_config.rb
+"$isy_config = {:hostname => 'https://isy.domain.com', :username => 'my_username', :password => 'my_password' }"
+EOF
 ```
