@@ -1,6 +1,6 @@
 workflow/isy_config.rb
 workflow/.bundle
-workflow/bundle
+workflow/bundle/ruby
 .ruby-version
 
 workflow/lib/isy_test.rb
