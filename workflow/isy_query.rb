@@ -46,8 +46,6 @@ Alfred.with_friendly_error do |alfred|
   else # cached feedback not valid or nonexistent
     logger.debug("Cached feedback not found or not valid, generating") if debug
     fb = alfred.feedback
-    # fb.add_item({:title => 'waiting'})
-    puts fb.to_alfred(query)
     isy = ISY.new($isy_config[:hostname], $isy_config[:username], $isy_config[:password])
 
     # handle nodes (single lights/non-scenes)
@@ -112,7 +110,6 @@ Alfred.with_friendly_error do |alfred|
         :valid        => "yes",
       })    
     end
-    # puts fb.to_xml(query)
     fb.put_cached_feedback
     puts fb.to_alfred
   end
